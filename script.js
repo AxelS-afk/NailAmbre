@@ -52,22 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // CTA Button
-    const ctaButton = document.querySelector('.cta-button');
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function() {
-            showNotification('Veuillez nous appeler ou remplir le formulaire de contact! 📞', 'info');
-        });
-    }
-
-    // Reserve buttons
-    const reserveButtons = document.querySelectorAll('.reserve-btn');
-    reserveButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            showNotification('Merci de votre intérêt! Veuillez remplir le formulaire de contact. ✨', 'info');
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        });
-    });
+    // CTA Button - désormais géré par un lien HTML standard
+    // Les boutons de réservation redirigent maintenant vers la section #reservation
 
     // Smooth scroll for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
